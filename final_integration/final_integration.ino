@@ -459,8 +459,7 @@ void stepCounter() {
       filter_unit_step = step_count;
       filter_timer = millis();
       step_index = step_index + 1;
-
-      Serial.println("giant array " + arr_to_string_steps(step_array, step_index));
+     Serial.println("giant array " + arr_to_string_steps(step_array, step_index));
     }
 
     if (y > 1.2) {
@@ -774,7 +773,7 @@ float averaging_filter(float input) {
     return sum/stored_size;
     
 }
-
+$$$start
 float shift_heartrates(float input) {
   //shift the heartrates to get the latest heartrates that can be used to calculate the BPMs
     float sum=0;
@@ -790,6 +789,7 @@ float shift_heartrates(float input) {
     return sum;
     
 }
+$$$end
 
 void peak(){
   //Serial.println("peak is being called");
