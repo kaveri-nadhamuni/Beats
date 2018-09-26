@@ -773,23 +773,6 @@ float averaging_filter(float input) {
     return sum/stored_size;
     
 }
-$$$start
-float shift_heartrates(float input) {
-  //shift the heartrates to get the latest heartrates that can be used to calculate the BPMs
-    float sum=0;
-    latest_heartrate[0]=input;
-    for (int i=0; i<=LATEST_HEARTRATE; i++){
-        sum=sum+latest_heartrate[i];
-    }
-    
-    for (int i=LATEST_HEARTRATE; i>0; i=i-1){
-        latest_heartrate[i]=latest_heartrate[i-1];
-    }
-   
-    return sum;
-    
-}
-$$$end
 
 void peak(){
   //Serial.println("peak is being called");
